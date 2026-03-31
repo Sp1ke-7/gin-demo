@@ -183,7 +183,6 @@ func login(c *gin.Context) {
 	c.JSON(200, gin.H{"token": tokenString, "user_id": user.ID})
 }
 
-// JWT认证中间件
 func authMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
